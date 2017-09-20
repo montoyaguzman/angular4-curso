@@ -24,3 +24,17 @@
 		<li>{{trabajadores[2].contratado}}</li>
 	</ul>
 </div>
+
+<h3>Listado de empleados</h3>
+
+<ul>
+	<li *ngFor="let empelado of trabajadores">
+		Empleado: 
+		<ul>
+			<li>{{empleado.nombre}}</li>
+			<li>{{empleado.edad}}</li>
+			<li>{{empleado.cargo}}</li>
+			<li>{{empleado.contratado}}</li>
+		</ul>
+	</li>
+</ul>
