@@ -6,8 +6,17 @@
 </div>
 <h2>Curso de Angular 4 - Jose Montoya </h2>
 <hr>
-<!-- <fruta></fruta> -->
-<empleado></empleado>
+<!-- <app-fruta></app-fruta> -->
+<!--<app-empleado></app-empleado>-->
 <!-- <comp-hijo [nombre]="'Jose'" [app]="'Montoya'"></comp-hijo> -->
+
+<nav>
+  <a [routerLink]="['/app-home']" [routerLinkActive]="['activado']">Home</a> |
+  <a [routerLink]="['/app-fruta']" [routerLinkActive]="['activado']">Fruta</a> |
+  <a [routerLink]="['/app-empleado']" [routerLinkActive]="['activado']">Empleado</a> |
+  <a [routerLink]="['/app-contacto']" [routerLinkActive]="['activado']">Contacto</a>
+</nav>
+
+<router-outlet></router-outlet>
 
 

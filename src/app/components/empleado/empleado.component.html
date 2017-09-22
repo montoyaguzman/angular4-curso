@@ -1,8 +1,17 @@
 <h3>{{ titulo_empleado }}</h3>
 
-<strong>Empleado estrella</strong>
-<br/>
-<br/>
+<!-- <strong>Empleado estrella</strong>
+<br/> -->
+
+
+<h3>Colores Switch</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{'background':color , 'color': 'white', 'padding': '20px' }">Es de color ROJO</li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{'background':color , 'color': 'white', 'padding': '20px' }">Es de color VERDE</li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{'background':color , 'color': 'white', 'padding': '20px' }">Es de color AZUL</li>
+</ul>
+
+<hr/>
 
 <button (click)="cambiarExterno(true)">Mostrar externo</button>
 <button (click)="cambiarExterno(false)">Mostrar interno[2]</button>
@@ -25,11 +34,14 @@
 	</ul>
 </div>
 
+<hr/>
+
+
 <h3>Listado de empleados</h3>
 
 <ul>
-	<li *ngFor="let empelado of trabajadores">
-		Empleado: 
+	<li *ngFor="let empelado of trabajadores; let pos = index">
+    Empleado <strong>{{pos + 1}}:</strong>
 		<ul>
 			<li>{{empleado.nombre}}</li>
 			<li>{{empleado.edad}}</li>
@@ -38,3 +50,26 @@
 		</ul>
 	</li>
 </ul>
+
+<hr/>
+
+<!--
+Tipos de directivas:
+1. Directivas condicionales: *ngIf
+2. Directivas de eventos: (click)
+3. Directivas de Binding: [ngSwitch]
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

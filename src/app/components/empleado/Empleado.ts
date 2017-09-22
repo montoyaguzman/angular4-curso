@@ -1,4 +1,4 @@
-export class Empleado{
+export class Empleado {
 
 	/*public nombre:string;
 	public edad:number;
@@ -9,10 +9,10 @@ export class Empleado{
 		this.nombre = nombre;
 		this.edad = edad;
 	}*/
-	constructor(
-		public nombre:string = "Jose",
-		public edad:number,
-		public cargo:string,
-		public contratado:boolean
-	){}
+  constructor(
+    public nombre: string = 'Jose',
+		public edad: number,
+		public cargo: string,
+		public contratado: boolean
+	) {}
 }
