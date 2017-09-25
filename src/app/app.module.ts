@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {routing, appRoutingProviders} from './components/routing/app.routing';
+import { routing, appRoutingProviders } from './components/routing/app.routing';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './components/fruta/fruta.component';
@@ -20,6 +23,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     routing
   ],
   providers: [appRoutingProviders],
