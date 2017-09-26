@@ -1,1 +1,9 @@
 <h3>{{titulo}}</h3>
+
+<div *ngIf="parametro">
+	Parametro: {{ parametro }}
+</div>
+
+<div *ngIf="!parametro">
+	<button (click)="redirigir()">Redirigir</button>
+</div>

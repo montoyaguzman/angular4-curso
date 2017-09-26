@@ -1,9 +1,13 @@
+/*html {
+	background: black;
+}*/
+
 .fondoAzul {
   background: lightblue !important;
 }
 
 .fondoVerde {
-  background: lightblue !important;
+  background: lightgreen !important;
 }
 
 .letraGrande {
@@ -12,5 +16,5 @@
 
 .activado {
   font-weight: bold;
-  background: yellow;
+  background: lightpink;
 }
