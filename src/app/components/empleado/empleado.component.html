@@ -77,15 +77,14 @@
 
 
 <h3>Listado de empleados</h3>
-
 <ul>
-	<li *ngFor="let empelado of trabajadores; let pos = index">
+	<li *ngFor="let empelado of trabajadores; let pos = "index">
     Empleado <strong>{{pos + 1}}:</strong>
 		<ul>
-			<li>{{empleado.nombre}}</li>
-			<li>{{empleado.edad}}</li>
-			<li>{{empleado.cargo}}</li>
-			<li>{{empleado.contratado}}</li>
+			<li> {{empleado.nombre}} </li>
+			<li> {{empleado.edad}} </li>
+			<li> {{empleado.cargo}} </li>
+			<li> {{empleado.contratado}} </li>
 		</ul>
 	</li>
 </ul>
