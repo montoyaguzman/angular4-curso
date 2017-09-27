@@ -9,7 +9,7 @@ export class SuperHeroComponent {
 	public heros: Array<SuperHero>;
 
 	ngOnInit() {
-		//this.hero = new SuperHero('Flash', 'DC', 'Speed Force');
+		this.hero = new SuperHero('Flash', 'DC', 'Speed Force');
 		this.heros = [
 			new SuperHero('Flash', 'DC', 'Speed Force'),
 			new SuperHero('Iron Man', 'Marvel', 'Armadura'),
