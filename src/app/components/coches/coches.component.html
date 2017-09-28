@@ -1,0 +1,46 @@
+<h1>Componente de Coches</h1>
+
+<form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
+  <p>
+    <label>Nombre: </label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
+    <span *ngIf="nombre.touched && !nombre.valid">
+      Error
+    </span>
+  </p>
+
+  <p>
+    <label>Marca: </label>
+    <input type="text" name="marca" #marca="ngModel" [(ngModel)]="coche.marca" required
+    pattern="[0-9]+">
+    <span *ngIf="marca.touched && !marca.valid">
+      Error
+    </span>
+  </p>
+
+  <p>
+  <label>Modelo: </label>
+  <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="coche.modelo" required>
+  </p>
+
+  <p>
+  <label>Color: </label>
+  <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required>
+  </p>
+
+  <input type="Submit" value="Guardar" [disabled]="!formCoche.form.valid">
+
+</form>
+
+
+<div>
+  <h3>Listado de coches</h3>
+
+  <ul *ngFor="let coche of coches">
+    <li> {{ coche.nombre }} </li>
+    <li> {{ coche.marca }} </li>
+    <li> {{ coche.modelo }} </li>
+    <li> {{ coche.color }} </li>
+  </ul>
+
+</div>
