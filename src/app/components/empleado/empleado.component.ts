@@ -12,27 +12,27 @@ export class EmpleadoComponent {
 	public trabajadores: Array<Empleado>;
 	public trabajadorExterno: boolean;
 	public color: string;
-	public colorSeleccionado:string;
+	public colorSeleccionado: string;
 
-	ngOnInit() {
-		this.empleado = new Empleado('Jose Montoya', 45, 'Desarrollador .NET', true);
-		// console.log(this.empleado);
-		this.trabajadores = [
-			new Empleado('Miguel Macias', 45, 'Spring newbie', false),
-			new Empleado('Cin Leon', 30, 'Scrum Master', false),
-			new Empleado('Jazmin Cahuatzi', 22, 'Java Jr.', false)
-		]
+    ngOnInit() {
+      this.empleado = new Empleado('Jose Montoya', 45, 'Desarrollador .NET', true);
+      // console.log(this.empleado);
+      this.trabajadores = [
+        new Empleado('Miguel Macias', 45, 'Spring newbie', false),
+        new Empleado('Cin Leon', 30, 'Scrum Master', false),
+        new Empleado('Jazmin Cahuatzi', 22, 'Java Jr.', false)
+      ];
 
-		this.trabajadorExterno = false;
-		this.color = 'blue';
-		this.colorSeleccionado = '#ccc';
-	}
+      this.trabajadorExterno = false;
+      this.color = 'blue';
+      this.colorSeleccionado = '#ccc';
+    }
 
-	cambiarExterno(valor) {
-		this.trabajadorExterno = valor;
-	}
+    cambiarExterno(valor) {
+      this.trabajadorExterno = valor;
+    }
 
-	logColorSeleccionado(){
-		console.log(this.colorSeleccionado);
-	}
+    logColorSeleccionado() {
+      console.log(this.colorSeleccionado);
+    }
 }

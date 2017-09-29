@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Coche } from './Coche';
-import { PeticionesService } from '../servicios/peticiones.services';
+// import { PeticionesService } from '../servicios/peticiones.services';
 
 @Component({
   selector: 'app-coches',
   templateUrl: './coches.component.html',
-  providers: [PeticionesService]
+  // providers: [PeticionesService]
 })
 
 export class CochesComponent {
@@ -13,7 +13,7 @@ export class CochesComponent {
   public coches: Array<Coche>;
 
   constructor(
-    private petserv: PeticionesService
+    // private petserv: PeticionesService
   ) {
     this.coche = new Coche('', '', '', '');
     this.coches = [
@@ -24,7 +24,7 @@ export class CochesComponent {
   }
 
   onInit() {
-    this.petserv.getPrueba();
+    // this.petserv.getPrueba();
   }
 
   onSubmit() {

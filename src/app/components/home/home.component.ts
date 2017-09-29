@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RopaService } from '../servicios/ropa.service';
+import { RopaService } from '../servicios/ropa.services';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,25 @@ import { RopaService } from '../servicios/ropa.service';
 
 export class HomeComponent {
   public titulo = 'Pagina Principal';
+  public listadoRopa: Array<String>;
+  public prendaAGuardar: string;
 
   constructor(
       private rs: RopaService
   ) {}
 
   ngOnInit() {
-        console.log(this.rs.prueba());
+      console.log(this.listadoRopa = this.rs.getCollecionRopa());
+      console.log(this.rs.prueba('Camiseta'));
   }
+
+  guardarPrenda() {
+    this.rs.agregaPrenda(this.prendaAGuardar);
+    this.prendaAGuardar = '';
+  }
+
+  eliminarPrenda(index: number) {
+    this.rs.borrarPrenda(index);
+  }
+
 }

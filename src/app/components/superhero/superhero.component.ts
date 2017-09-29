@@ -8,15 +8,14 @@ export class SuperHeroComponent {
 	public hero: SuperHero;
 	public heros: Array<SuperHero>;
 
-	ngOnInit() {
-		this.hero = new SuperHero('Flash', 'DC', 'Speed Force');
-		this.heros = [
-			new SuperHero('Flash', 'DC', 'Speed Force'),
-			new SuperHero('Iron Man', 'Marvel', 'Armadura'),
-			new SuperHero('Cyclope', 'Marvel', 'Rayo Laser'),
-			new SuperHero('Batman', 'DC', 'Es millonario'),
-			new SuperHero ('Quick Silver', 'Marvel', 'Speed Force')
-		]
-
+    ngOnInit() {
+      this.hero = new SuperHero('Flash', 'DC', 'Speed Force');
+      this.heros = [
+        new SuperHero('Flash', 'DC', 'Speed Force'),
+        new SuperHero('Iron Man', 'Marvel', 'Armadura'),
+        new SuperHero('Cyclope', 'Marvel', 'Rayo Laser'),
+        new SuperHero('Batman', 'DC', 'Es millonario'),
+        new SuperHero ('Quick Silver', 'Marvel', 'Speed Force')
+      ];
 	}
 }

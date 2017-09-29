@@ -8,7 +8,7 @@
 <button (click)="logColorSeleccionado()">Mostrar color</button>
 <input type="text" [(ngModel)]=colorSeleccionado/>
 
-<pre 
+<pre
 	[style.border]="colorSeleccionado == 'red' ? '4px solid red' : '4px solid black'"
 	[ngClass] = "{
 		fondoAzul: colorSeleccionado == 'blue',
@@ -21,12 +21,12 @@
 	[ngClass] = "['fondoAzul','letraGrande']"
 -->
 
-<!-- Atributo del PRE 
-	[class.fondoAzul]="colorSeleccionado == 'blue'" 
+<!-- Atributo del PRE
+	[class.fondoAzul]="colorSeleccionado == 'blue'"
 -->
 
 
-	<strong>Color elegido:</strong> {{colorSeleccionado}}	
+	<strong>Color elegido:</strong> {{colorSeleccionado}}
 </pre>
 
 <div [ngStyle] = "{
@@ -36,7 +36,7 @@
 	'float':'right',
 	'margin-right':'70%'
 }">
-	
+
 </div>
 
 
@@ -78,7 +78,7 @@
 
 <h3>Listado de empleados</h3>
 <ul>
-	<li *ngFor="let empelado of trabajadores; let pos = index">
+	<li *ngFor="let empleado of trabajadores; let pos = index">
     Empleado <strong>{{pos + 1}}:</strong>
 		<ul>
 			<li> {{empleado.nombre}} </li>
