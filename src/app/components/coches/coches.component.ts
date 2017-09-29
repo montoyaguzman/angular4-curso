@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { Coche } from './Coche';
-// import { PeticionesService } from '../servicios/peticiones.services';
+import { PeticionesService } from '../servicios/peticiones.services';
 
 @Component({
   selector: 'app-coches',
   templateUrl: './coches.component.html',
-  // providers: [PeticionesService]
+  providers: [PeticionesService]
 })
 
 export class CochesComponent {
   public coche: Coche;
   public coches: Array<Coche>;
+  public articulos;
 
   constructor(
-    // private petserv: PeticionesService
+    private petserv: PeticionesService
   ) {
     this.coche = new Coche('', '', '', '');
     this.coches = [
@@ -23,8 +24,19 @@ export class CochesComponent {
     ];
   }
 
-  onInit() {
-    // this.petserv.getPrueba();
+  ngOnInit() {
+    // console.log('en init');
+    // console.log(this.petserv.getPrueba());
+    this.petserv.getArticulos().subscribe(
+      result => {
+        this.articulos = result;
+        console.log(result);
+      },
+      error => {
+        const errorMessage = <any>error;
+        console.log(errorMessage);
+      }
+    );
   }
 
   onSubmit() {

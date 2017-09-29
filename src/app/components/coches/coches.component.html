@@ -1,3 +1,16 @@
+<div>
+  <h3>Listado de articulos</h3>
+
+  <ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos"> {{ articulo.id }} -- {{ articulo.title }} </li>
+  </ul>
+  <span *ngIf="!articulos"> Cargando lista... </span>
+
+</div>
+
+
+<hr/>
+
 <h1>Componente de Coches</h1>
 
 <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
@@ -12,20 +25,20 @@
   <p>
     <label>Marca: </label>
     <input type="text" name="marca" #marca="ngModel" [(ngModel)]="coche.marca" required
-    pattern="[0-9]+">
+           pattern="[0-9]+">
     <span *ngIf="marca.touched && !marca.valid">
       Error
     </span>
   </p>
 
   <p>
-  <label>Modelo: </label>
-  <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="coche.modelo" required>
+    <label>Modelo: </label>
+    <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="coche.modelo" required>
   </p>
 
   <p>
-  <label>Color: </label>
-  <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required>
+    <label>Color: </label>
+    <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required>
   </p>
 
   <input type="Submit" value="Guardar" [disabled]="!formCoche.form.valid">
