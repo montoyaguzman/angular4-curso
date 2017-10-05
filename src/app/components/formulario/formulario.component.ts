@@ -1,29 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
+
 
 @Component({  selector: 'app-formulario', templateUrl: './formulario.component.html' })
 
 export class FormularioComponent {
-	public titulo_formulario = 'Formularios de Prueba';
-	public roleVal: any;
+  @ViewChild('myButton') myButton: ElementRef;
+  public titulo_formulario = 'Formularios de Prueba';
+  public roleVal: any;
+  public check: boolean;
 
-  constructor() {
+  constructor(private renderer: Renderer2) {
     this.roleVal = '';
+    this.check = false;
   }
 
-  ngOnInit() {
-
+  disable() {
+    // this.myButton.nativeElement.setAttribute("disabled", "true"); //BAD PRACTICE
+    this.renderer.setAttribute(this.myButton.nativeElement, 'disabled', 'true');
   }
 
-	prueba(){
-    console.log('holaaaaa');
-
-
-
-        this.roleVal = 'disabled';
+  enable() {
+   // this.myButton.nativeElement.removeAttribute("disabled"); //BAD PRACTICE
+   this.renderer.removeAttribute(this.myButton.nativeElement, 'disabled');
   }
 
+  validar() {
+    if (this.check) {
+      this.disable();
+    }
+    if (!this.check) {
+      this.enable();
+    }
+  }
 
-  
-      
-      
 }

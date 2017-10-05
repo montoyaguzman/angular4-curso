@@ -2,11 +2,13 @@
 
 
 <div>
-  
-  <input type="checkbox" name="op1" [attr.disabled]="rolVal"> Op1
+
+  <input type="checkbox" name="op1" (click)="validar()"> Op1
   <br>
-  <input type="checkbox" name="op2" [attr.disabled]=""> Op2
+  <input type="checkbox" name="op2" #myButton> Op2
   <br>
-  <input type="checkbox" name="op3"[attr.disabled]="" (click)="prueba()"> Op3
+  <input type="checkbox" name="op3"> Op3
+  <br>
+  <input type="checkbox" name="op4"> Op4
 
 </div>
