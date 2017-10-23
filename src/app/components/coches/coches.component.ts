@@ -10,18 +10,29 @@ import { PeticionesService } from '../servicios/peticiones.services';
 
 export class CochesComponent {
   public coche: Coche;
+  public coche1: Coche;
   public coches: Array<Coche>;
   public articulos;
 
   constructor(
     private petserv: PeticionesService
   ) {
-    this.coche = new Coche('', '', '', '');
+    /*this.coche = new Coche('', '', '', '');
     this.coches = [
       new Coche('Jag95', 'Jaguar', '1234', 'amarillo'),
       new Coche('Merz23', 'Mercedez', '4789', 'rojo'),
       new Coche('Lam21', 'Lamborghini', '2167', 'azul')
-    ];
+    ];*/
+
+    this.coche1 = new Coche();
+    
+
+
+    this.coche1.nombre = "Jaguar";
+    this.coche1.marca = "adsgadgds";
+    this.coche1.modelo = "sdvw";
+    this.coche1.color1 = "agcufsvsvar";
+
   }
 
   ngOnInit() {
