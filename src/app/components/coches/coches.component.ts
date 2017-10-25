@@ -9,35 +9,42 @@ import { PeticionesService } from '../servicios/peticiones.services';
 })
 
 export class CochesComponent {
-  public coche: Coche;
+  public cochetoArray: Coche;
   public coche1: Coche;
-  public coches: Array<Coche>;
+  public coche2: Coche;
+  public arregloCoches: Array<Coche>;
   public articulos;
 
   constructor(
     private petserv: PeticionesService
   ) {
-    /*this.coche = new Coche('', '', '', '');
-    this.coches = [
+    
+    // Array de Coches
+    this.cochetoArray = new Coche('', '', '','');
+    this.arregloCoches = [
       new Coche('Jag95', 'Jaguar', '1234', 'amarillo'),
       new Coche('Merz23', 'Mercedez', '4789', 'rojo'),
       new Coche('Lam21', 'Lamborghini', '2167', 'azul')
-    ];*/
+    ];
 
-    this.coche1 = new Coche();
-    
+    // 
+    this.coche1 = new Coche('', '', '', '');
+    console.log("Coche1 (vacio):" + this.coche1.nombre);
 
+    this.coche2 = new Coche('Nom', '', '');
+    console.log("Coche2 (vacio):" + this.coche2.nombre);
 
+    /*this.coche1 = new Coche();
     this.coche1.nombre = "Jaguar";
     this.coche1.marca = "adsgadgds";
     this.coche1.modelo = "sdvw";
-    this.coche1.color1 = "agcufsvsvar";
+    this.coche1.color = "agcufsvsvar";
+    console.log("Coche 1:" + this.coche1.nombre);*/
 
   }
 
   ngOnInit() {
-    // console.log('en init');
-    // console.log(this.petserv.getPrueba());
+    // Peticion a Articulos
     this.petserv.getArticulos().subscribe(
       result => {
         this.articulos = result;
@@ -51,8 +58,8 @@ export class CochesComponent {
   }
 
   onSubmit() {
-    this.coches.push(this.coche);
-    this.coche = new Coche('', '', '', '');
+    this.arregloCoches.push(this.cochetoArray);
+    this.cochetoArray = new Coche('', '', '', '');
   }
 
 }
