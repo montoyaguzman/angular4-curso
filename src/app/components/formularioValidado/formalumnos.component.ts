@@ -11,6 +11,6 @@ export class FormalumnosComponent {
   public alterego: string;
   public poder: string;
 
-  
+
 
 }
