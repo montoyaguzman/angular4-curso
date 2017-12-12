@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { Empleado } from './empleado';
+import { Empleado } from './Empleado';
 
 /*Un decorador aporata funcionalidad a una clase,
 no es una funcion*/
-@Component({  selector: 'app-empleado', templateUrl: './empleado.component.html' })
+@Component({
+  selector: 'app-empleado',
+  templateUrl: './empleado.component.html'
+})
 
 // deja usar la clase dentro de otro fichero
 export class EmpleadoComponent {
@@ -12,7 +15,7 @@ export class EmpleadoComponent {
 	public trabajadores: Array<Empleado>;
 	public trabajadorExterno: boolean;
 	public color: string;
-	public colorSeleccionado:string;
+	public colorSeleccionado: string;
 
 	ngOnInit() {
 		this.empleado = new Empleado('Jose Montoya', 45, 'Desarrollador .NET', true);
@@ -21,7 +24,7 @@ export class EmpleadoComponent {
 			new Empleado('Miguel Macias', 45, 'Spring newbie', false),
 			new Empleado('Cin Leon', 30, 'Scrum Master', false),
 			new Empleado('Jazmin Cahuatzi', 22, 'Java Jr.', false)
-		]
+		];
 
 		this.trabajadorExterno = false;
 		this.color = 'blue';

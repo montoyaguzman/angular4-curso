@@ -11,7 +11,8 @@ import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
-import { SuperHeroComponent } from './components/superhero/superhero.component'
+import { SuperHeroComponent } from './components/superhero/superhero.component';
+import { FormalumnosComponent } from './components/formularioValidado/formalumnos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SuperHeroComponent } from './components/superhero/superhero.component'
     HijoComponent,
     HomeComponent,
     ContactoComponent,
-    SuperHeroComponent
+    SuperHeroComponent,
+    FormalumnosComponent
   ],
   imports: [
     BrowserModule,
