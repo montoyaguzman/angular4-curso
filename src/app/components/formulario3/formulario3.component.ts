@@ -17,7 +17,7 @@ export class Formulario3Component {
     this.alumnosForm = new FormGroup({
       'name': new FormControl(this.nombre, [
         Validators.required,
-        Validators.minLength(4),
+        Validators.minLength(2),
         forbiddenNameValidator(/bobo/i) // <-- Here's how you pass in the custom validator.
       ]),
     });
