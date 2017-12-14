@@ -1,0 +1,22 @@
+<h1>Formulario 3</h1>
+
+<form #alumnosForm="ngForm" (ngSubmit)="registro()">
+    <span>Nombre: </span>
+
+    <input id="name" name="name" class="form-control"
+      required minlength="4" forbiddenName="bob"
+      [(ngModel)]="nombre" #name="ngModel" >
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+          Ese campo no es vacio
+      </div>
+      <div *ngIf="name.errors.minlength">
+          Debe tener al menos 2 caracteres
+      </div>
+      <div *ngIf="name.errors.forbiddenName">
+          No puedes escribir "bobo" como nombre
+      </div>
+    </div>
+</form>

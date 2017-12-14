@@ -1,0 +1,10 @@
+<h1>Formulario 2</h1>
+
+<form #alumnosForm="ngForm" (ngSubmit)="registro()">
+  <span>Codigo: </span>
+
+  <input id="codigo" name="codigo" class="form-control"
+         ngModel #codigo="ngModel" sinEspacios>
+  <span *ngIf="codigo.errors">No se permiten espacios</span>
+
+</form>

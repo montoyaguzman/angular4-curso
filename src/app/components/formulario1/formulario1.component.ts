@@ -1,14 +1,14 @@
 import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
 
 
-@Component({  selector: 'app-formulario', templateUrl: './formulario.component.html' })
+@Component({  selector: 'app-formulario1', templateUrl: './formulario1.component.html' })
 
-export class FormularioComponent {
+export class Formulario1Component {
   @ViewChild('op1') op1: ElementRef;
   @ViewChild('op2') op2: ElementRef;
   @ViewChild('op3') op3: ElementRef;
   @ViewChild('op4') op4: ElementRef;
-  public titulo_formulario = 'Formularios de Prueba';
+  public titulo_formulario1 = 'Form 1';
   public roleVal: any;
   public check: boolean;
   public bandera: boolean;
