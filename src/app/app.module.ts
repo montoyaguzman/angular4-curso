@@ -13,7 +13,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { SuperHeroComponent } from './components/superhero/superhero.component';
 import { CochesComponent } from './components/coches/coches.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
-import { FormalumnosComponent } from './components/formularioValidado/formalumnos.component';
+import { Formulario2Component } from './components/formularioValidado/formulario2.component';
+import { Validaciones } from './components/formularioValidado/validaciones.directive';
 
 
 @NgModule({
@@ -25,9 +26,10 @@ import { FormalumnosComponent } from './components/formularioValidado/formalumno
     HomeComponent,
     ContactoComponent,
     SuperHeroComponent,
-    FormalumnosComponent,
+    Validaciones,
     CochesComponent,
-    FormularioComponent
+    FormularioComponent,
+    Formulario2Component
   ],
   imports: [
     BrowserModule,
