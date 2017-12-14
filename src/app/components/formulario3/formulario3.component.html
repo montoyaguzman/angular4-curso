@@ -4,7 +4,7 @@
     <span>Nombre: </span>
 
     <input id="name" name="name" class="form-control"
-      required minlength="4" forbiddenName="bob"
+      required minlength="2" forbiddenName="bobo"
       [(ngModel)]="nombre" #name="ngModel" >
 
     <div *ngIf="name.invalid && (name.dirty || name.touched)"
