@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { forbiddenNameValidator } from './forbiddenName.directive';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -8,24 +7,26 @@ import { forbiddenNameValidator } from './forbiddenName.directive';
   templateUrl: './formulario3.component.html'
 })
 
-export class Formulario3Component {
-  public titulo_formalumnos = 'Formulario con validaciones';
-  public alumnosForm: any;
-  public nombre: string;
+export class Formulario3Component implements OnInit {
+  public form: FormGroup;
 
-  ngOnInit(): void {
-    this.alumnosForm = new FormGroup({
-      'name': new FormControl(this.nombre, [
-        Validators.required,
-        Validators.minLength(2),
-        forbiddenNameValidator(/bobo/i) // <-- Here's how you pass in the custom validator.
-      ]),
-    });
+  constructor(private fb: FormBuilder) {
+    /*this.form = fb.group({
+      codigo: '',
+      nombre: '',
+      // contacto: fb.group({
+      telefono: '',
+      email: ''
+      // })
+    });*/
+  }
+
+  ngOnInit() {
+
   }
 
   registro() {
 
   }
-
 
 }

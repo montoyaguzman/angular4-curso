@@ -16,4 +16,21 @@ function verificarEspacios(texto: AbstractControl) {
   ]
 })
 
+/*function minimoCaracteres(texto: AbstractControl) {
+  if (texto.value == null) { return null; }
+  if (texto.value.length > 2) {
+    return {minimoCaracteres: true};
+  }
+  return null;
+}
+
+@Directive({
+  selector: '[minimoCaracteres]',
+  providers: [
+    { provide: NG_VALIDATORS, multi: true, useValue: minimoCaracteres }
+  ]
+})*/
+
+
+
 export class Validaciones { }

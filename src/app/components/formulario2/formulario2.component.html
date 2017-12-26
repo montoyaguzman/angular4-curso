@@ -4,7 +4,7 @@
   <span>Codigo: </span>
 
   <input id="codigo" name="codigo" class="form-control"
-         ngModel #codigo="ngModel" sinEspacios>
+         ngModel #codigo="ngModel" sinEspacios minimoCaracteres>
   <span *ngIf="codigo.errors">No se permiten espacios</span>
 
 </form>

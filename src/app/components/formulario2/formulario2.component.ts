@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {RopaService} from '../servicios/ropa.services';
-
 
 @Component({
   selector: 'app-formulario2',

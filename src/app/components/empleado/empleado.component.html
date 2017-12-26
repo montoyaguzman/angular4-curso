@@ -1,12 +1,11 @@
 <h3>{{ titulo_empleado }}</h3>
-
-<!-- <strong>Empleado estrella</strong>
-<br/> -->
 <hr/>
-
 <h4>Selector de colores: </h4>
+
 <button (click)="logColorSeleccionado()">Mostrar color</button>
-<input type="text" [(ngModel)]=colorSeleccionado/>
+<input type="text"
+       id="colorS" name="colorS" #colorS="ngModel"
+       [(ngModel)]="colorSeleccionado">
 
 <pre
 	[style.border]="colorSeleccionado == 'red' ? '4px solid red' : '4px solid black'"
@@ -17,15 +16,13 @@
 	}"
 
 >
-<!-- ngClass con array, queda fijo
-	[ngClass] = "['fondoAzul','letraGrande']"
--->
+  <!-- ngClass con array, queda fijo
+    [ngClass] = "['fondoAzul','letraGrande']"
+  -->
 
-<!-- Atributo del PRE
-	[class.fondoAzul]="colorSeleccionado == 'blue'"
--->
-
-
+  <!-- Atributo del PRE
+    [class.fondoAzul]="colorSeleccionado == 'blue'"
+  -->
 	<strong>Color elegido:</strong> {{colorSeleccionado}}
 </pre>
 
@@ -57,19 +54,19 @@
 
 <div *ngIf = "trabajadorExterno == true">
 	<ul>
-		<li>{{empleado.nombre}}</li>
-		<li>{{empleado.edad}}</li>
-		<li>{{empleado.cargo}}</li>
-		<li>{{empleado.contratado}}</li>
+		<li>{{ empleado.nombre }}</li>
+		<li>{{ empleado.edad }}</li>
+		<li>{{ empleado.cargo }}</li>
+		<li>{{ empleado.contratado }}</li>
 	</ul>
 </div>
 
 <div *ngIf = "trabajadorExterno == false">
 	<ul>
-		<li>{{trabajadores[2].nombre}}</li>
-		<li>{{trabajadores[2].edad}}</li>
-		<li>{{trabajadores[2].cargo}}</li>
-		<li>{{trabajadores[2].contratado}}</li>
+		<li>{{ trabajadores[2].nombre }}</li>
+		<li>{{ trabajadores[2].edad }}</li>
+		<li>{{ trabajadores[2].cargo }}</li>
+		<li>{{ trabajadores[2].contratado }}</li>
 	</ul>
 </div>
 
@@ -81,10 +78,10 @@
 	<li *ngFor="let empleado of trabajadores; let pos = index">
     Empleado <strong>{{pos + 1}}:</strong>
 		<ul>
-			<li> {{empleado.nombre}} </li>
-			<li> {{empleado.edad}} </li>
-			<li> {{empleado.cargo}} </li>
-			<li> {{empleado.contratado}} </li>
+			<li> {{ empleado.nombre }} </li>
+			<li> {{ empleado.edad }} </li>
+			<li> {{ empleado.cargo }} </li>
+			<li> {{ empleado.contratado }} </li>
 		</ul>
 	</li>
 </ul>
