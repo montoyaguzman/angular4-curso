@@ -1,5 +1,8 @@
 <h3>{{titulo}}</h3>
 <hr/>
+<strong>Fecha:</strong> {{ fechaPagina | date:'dd/MM/yyyy' }}
+<strong>Fecha:</strong> {{ fechaPagina | date:'fullDate'| uppercase | lowercase }}
+<hr/>
 
 <br>
 <input type="text" [(ngModel)]="prendaAGuardar" > <button (click)="guardarPrenda();">Añadir Prenda</button>

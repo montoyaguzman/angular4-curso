@@ -4,13 +4,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class RopaService {
-
-  public nombrePrenda = 'Pantalones';
+  public nombrePrenda: String;
   public coleccionRopa = ['Zapatos', 'Saco', 'Camisa manga larga'];
 
   prueba(prenda) {
-    // return this.nombrePrenda;
-    return prenda;
+    this.nombrePrenda = prenda;
+    return this.nombrePrenda;
   }
 
   agregaPrenda(prenda: string): Array <string> {
